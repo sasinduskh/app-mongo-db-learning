@@ -13,6 +13,10 @@ app.use(bodyParser.json());
 
 const URL = process.env.MONGODB_URL;
 
+app.get('/payment.php', function (req, res, next) {
+  res.send('PHP route called!');
+});
+
 mongoose.connect(URL,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
